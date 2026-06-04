@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+template/node_modules/
+
+# build output
+dist/
+template/dist/
+
+# CLI build workdir + generated sites
+.pm-workdir/
+workdir/
+out/
+
+# env / secrets
+.env
+.env.local
+
+# vercel
+.vercel/
+
+# os / editor
+.DS_Store
+*.log

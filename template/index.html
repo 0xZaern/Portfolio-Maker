@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--
+      favicon: if config.assets.logo is set, the CLI replaces this href.
+      Default falls back to the Portfolio Maker generic favicon.
+    -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      Title, description, and OG tags are populated at runtime by the
+      HeadMeta component (src/components/HeadMeta.tsx) which reads from
+      site.config.json.  The static values below are build-time fallbacks
+      for crawlers that execute JS — they will be overwritten on first render.
+    -->
+    <title>Portfolio</title>
+    <meta name="description" content="Personal portfolio site." />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Portfolio" />
+    <meta property="og:description" content="Personal portfolio site." />
+    <meta property="og:image" content="/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Portfolio" />
+    <meta name="twitter:description" content="Personal portfolio site." />
+    <meta name="twitter:image" content="/og.png" />
+
+    <!--
+      JetBrains Mono is always injected by main.tsx (needed for UI chrome).
+      Google Fonts for heading/body are injected dynamically by ThemeProvider
+      in main.tsx based on config.fonts.source.
+    -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
