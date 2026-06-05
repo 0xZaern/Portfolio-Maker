@@ -16,8 +16,10 @@ export function Footer() {
             <a
               key={platform}
               href={href}
+              title={label}
               target={href.startsWith("http") ? "_blank" : undefined}
               rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+              aria-label={label}
               className="text-[color:var(--pm-muted)] text-[9px] tracking-[0.25em] uppercase no-underline hover:text-[color:var(--pm-accent)] transition-colors duration-200 min-h-[44px] flex items-center py-3"
             >
               {label}
