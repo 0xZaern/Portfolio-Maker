@@ -1,4 +1,5 @@
 import fs from "fs";
+import os from "os";
 import path from "path";
 import { logger } from "./logger";
 
@@ -20,6 +21,17 @@ function allowedExtensions(kind: AssetKind): Set<string> {
 }
 
 /**
+ * Expands a leading ~ to the user's home directory so that paths like
+ * ~/Desktop/logo.svg work correctly on all platforms.
+ */
+function expandTilde(filePath: string): string {
+  if (filePath.startsWith("~/") || filePath === "~") {
+    return path.join(os.homedir(), filePath.slice(1));
+  }
+  return filePath;
+}
+
+/**
  * Validates that a path exists and has an acceptable extension.
  * Returns a validation error string or null when valid.
  */
@@ -27,7 +39,7 @@ export function validateAssetPath(
   filePath: string,
   kind: AssetKind
 ): string | null {
-  const resolved = path.resolve(filePath);
+  const resolved = path.resolve(expandTilde(filePath));
   if (!fs.existsSync(resolved)) {
     return `File not found: ${resolved}`;
   }
@@ -48,7 +60,7 @@ export function copyAsset(
   destDir: string,
   kind: AssetKind
 ): CopiedAsset {
-  const resolved = path.resolve(srcPath);
+  const resolved = path.resolve(expandTilde(srcPath));
   const filename = path.basename(resolved);
   const dest = path.join(destDir, filename);
 

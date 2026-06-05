@@ -152,7 +152,7 @@ See `site.config.example.json` for a complete example.
 | Writing card images | `writing[n].img` | svg, png, jpg, jpeg, webp |
 | BYO fonts | `fonts.files[n].file` | woff2 only |
 
-Files larger than 2 MB trigger a warning. All assets are copied into the staging directory and referenced by filename only in the config.
+Files larger than 2 MB trigger a warning. All assets are copied into the staging directory and referenced by filename only in the config. Paths starting with `~/` are expanded to your home directory.
 
 ---
 
