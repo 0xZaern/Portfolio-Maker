@@ -18,7 +18,8 @@ export type SocialPlatform =
   | "website"
   | "linkedin"
   | "youtube"
-  | "discord";
+  | "discord"
+  | "instagram";
 
 export interface SocialLink {
   /** Which platform — drives the icon shown. */
@@ -53,7 +54,10 @@ export interface WritingEntry {
   title: string;
   /** filename in /public for the card image. */
   img?: string;
-  /** external post URL. Omit + comingSoon:true for a placeholder. */
+  /**
+   * External post URL (Medium, Substack, personal blog, etc.).
+   * Omit together with `comingSoon: true` to render a placeholder card.
+   */
   href?: string;
   comingSoon?: boolean;
 }
