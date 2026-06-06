@@ -54,9 +54,6 @@ export function About() {
         <p className={`${paraClass} mb-5`} style={paraStyle}>
           {config.role}
         </p>
-        <p className={paraClass} style={paraStyle}>
-          {config.tagline}
-        </p>
       </BioBeat>
 
       {/* ── Closing line ────────────────────────────────────────────────── */}
