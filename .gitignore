@@ -10,6 +10,8 @@ template/dist/
 .pm-workdir/
 workdir/
 out/
+.build/
+*.build/
 
 # env / secrets
 .env

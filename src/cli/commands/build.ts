@@ -17,7 +17,7 @@ export async function runBuild(options: BuildOptions): Promise<string> {
   logger.heading("Portfolio Maker: Build");
   logger.info(`Config:  ${configPath}`);
   logger.info(`Assets:  ${assetsDir}`);
-  logger.info(`Workdir: ${workDir}`);
+  logger.info(`Workdir: ${workDir} (wiped and rebuilt each run)`);
   logger.blank();
 
   const config = loadConfig(configPath);
