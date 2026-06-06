@@ -36,3 +36,12 @@ export const accentColor = theme.accent;
  * labels, and secondary text.
  */
 export const mutedColor = "#6b5d52";
+
+/**
+ * Returns the muted color with an inline alpha suffix.
+ * Useful for one-off opacity values where a CSS variable isn't available.
+ * @param alpha - hex two-digit alpha, e.g. "40" for 25% opacity
+ */
+export function mutedAlpha(alpha: string): string {
+  return `${mutedColor}${alpha}`;
+}
