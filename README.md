@@ -175,6 +175,8 @@ To use your own fonts: choose "Bring your own .woff2 files" in the wizard and pr
 
 ## Development
 
+Requires **Node.js >= 18**.
+
 ```bash
 npm run dev -- init        # run via tsx (no compile step)
 npm run build              # compile to dist/

@@ -12,7 +12,7 @@ const program = new Command();
 program
   .name("portfolio-maker")
   .description("Build and deploy a portfolio site from your config and assets.")
-  .version("0.1.0");
+  .version("0.1.1");
 
 program
   .command("init")

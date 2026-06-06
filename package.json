@@ -1,6 +1,6 @@
 {
   "name": "portfolio-maker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CLI to build and deploy your portfolio site from a template.",
   "bin": {
     "portfolio-maker": "./dist/cli/index.js"
